@@ -1,0 +1,14 @@
+function fetchEngineeringCalculator(input1, input2, operator) {
+  const url = `https://example.com/api/engineering-calculator?input1=${input1}&input2=${input2}&operator=${operator}`;
+
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      // do something with the data
+      return data;
+    })
+    .catch(error => {
+      // handle errors
+      console.error(error);
+    });
+}
